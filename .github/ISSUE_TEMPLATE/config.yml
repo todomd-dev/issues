@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Feature request / question
+    url: https://github.com/todomd-dev/issues/discussions
+    about: Use Discussions for ideas, questions, and feature requests. Reserve issues for reproducible bugs.
