@@ -1,0 +1,74 @@
+name: Bug report
+description: Report a reproducible bug in todomd
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report!
+
+        If you have `gh` installed and are inside a project, the fastest path is to run
+        `todomd bug "short description"` — it opens an issue here with environment context
+        and the last lines of `~/.todomd/debug.log` attached automatically.
+
+        Otherwise, fill in the form below.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug. What did you do, what did you expect, and what happened instead?
+      placeholder: |
+        Steps to reproduce:
+        1. ...
+        2. ...
+
+        Expected: ...
+        Actual: ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: todomd version
+      description: Output of `todomd version`.
+      placeholder: "v1.2.3"
+    validations:
+      required: true
+  - type: dropdown
+    id: runner
+    attributes:
+      label: Runner
+      description: Which runner does your TODO.md use?
+      options:
+        - cmux
+        - tmux
+        - spawn
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      description: Operating system and architecture.
+      placeholder: "macOS arm64 / Linux amd64 / Windows"
+    validations:
+      required: true
+  - type: input
+    id: license-email
+    attributes:
+      label: License email (optional)
+      description: |
+        The email address used to purchase todomd, for order cross-reference with Lemon Squeezy.
+        Only needed if your bug relates to licensing or activation. Leave blank otherwise.
+      placeholder: "you@example.com"
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Debug log
+      description: Last ~40 lines of `~/.todomd/debug.log` (run `todomd logs` to print them). Optional but very helpful.
+      render: shell
+    validations:
+      required: false
