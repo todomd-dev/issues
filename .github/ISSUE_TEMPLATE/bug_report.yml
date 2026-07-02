@@ -42,7 +42,6 @@ body:
       options:
         - cmux
         - tmux
-        - spawn
         - Not sure
     validations:
       required: true
@@ -59,7 +58,7 @@ body:
     attributes:
       label: License email (optional)
       description: |
-        The email address used to purchase todomd, for order cross-reference with Lemon Squeezy.
+        The email address used to purchase todomd, for order cross-reference with Polar.
         Only needed if your bug relates to licensing or activation. Leave blank otherwise.
       placeholder: "you@example.com"
     validations:
